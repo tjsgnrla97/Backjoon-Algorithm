@@ -6,6 +6,7 @@ public class Java_2588 {
 		Scanner sc = new Scanner(System.in);
 		int A = sc.nextInt();
 		int B = sc.nextInt();
+		sc.close();
 		int mul1 = A*((B%100)%10);
 		int mul2 = A*((B%100)-((B%100)%10));
 		int mul3 = A*(B-(B%100));

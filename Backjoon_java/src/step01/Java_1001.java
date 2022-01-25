@@ -9,6 +9,7 @@ public class Java_1001 {
 		int a, b, sum;
 		a = sc.nextInt();
 		b = sc.nextInt();
+		sc.close();
 		sum = a - b;
 		System.out.print(sum);
 		/*

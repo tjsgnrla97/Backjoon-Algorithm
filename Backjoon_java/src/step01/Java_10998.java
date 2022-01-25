@@ -1,14 +1,15 @@
 package step01;
+
 import java.util.Scanner;
-public class Java_1000 {
+public class Java_10998 {
 	public static void main(String[] args) {
-		// 5.A+B
+		// 7.AxB
 		Scanner sc = new Scanner(System.in);
-		int a,b,sum;
+		int a, b, sum;
 		a = sc.nextInt();
 		b = sc.nextInt();
 		sc.close();
-		sum = a + b;
+		sum = a * b;
 		System.out.print(sum);
 	}
 }

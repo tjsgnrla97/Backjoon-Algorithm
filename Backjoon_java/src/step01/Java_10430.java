@@ -7,6 +7,7 @@ public class Java_10430 {
 		int A = sc.nextInt();
 		int B = sc.nextInt();
 		int C = sc.nextInt();
+		sc.close();
 		System.out.println((A+B)%C);
 		System.out.println(((A%C) + (B%C))%C);
 		System.out.println((A*B)%C);
