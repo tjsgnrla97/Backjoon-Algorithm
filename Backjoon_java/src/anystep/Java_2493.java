@@ -45,7 +45,7 @@ public class Java_2493 {
 			if(lazors.isEmpty()) {
 				result[i]=0;
 			}
-			lazors.add(new Lazor(i, curr_H));
+			lazors.push(new Lazor(i, curr_H));
 		}
 	
 		for(int i=0; i<N; i++) {
