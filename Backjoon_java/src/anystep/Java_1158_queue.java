@@ -10,10 +10,10 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 
-public class Java_1158 {
+public class Java_1158_queue {
 	static Queue<Integer> yosebArr = new LinkedList<Integer>();
 	public static void main(String[] args) throws IOException {
-		// 요세푸스 문제
+		// 요세푸스 문제 - 큐
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		
 		StringTokenizer stk = new StringTokenizer(in.readLine());
