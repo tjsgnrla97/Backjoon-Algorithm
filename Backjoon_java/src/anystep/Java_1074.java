@@ -16,31 +16,31 @@ public class Java_1074 {
 	static StringBuilder sb= new StringBuilder();
 	static int N,yi,xi,cnt;
 	public static void main(String[] args) throws IOException {
-//		stk = new StringTokenizer(in.readLine());
-//		N=Integer.parseInt(stk.nextToken());
-//		yi=Integer.parseInt(stk.nextToken());
-//		xi=Integer.parseInt(stk.nextToken());
-//		find((int)Math.pow(2, N), yi, xi);
-////		sb.append(cnt);
-////		out.write(sb.toString());
-//		out.write(cnt+"");
-////		System.out.println(cnt);
-//		in.close();
-//		out.flush();
-//		out.close();
-		Scanner sc = new Scanner(System.in);
-		int N = 1<<sc.nextInt(), R = sc.nextInt(), C = sc.nextInt();
-		
-		int result = 0;
-		
-		while ((N/=2) > 0) {
-			System.out.println("현재 N : "+ N +" 현재 result : "+result+" 현재 R : "+R+"현재 C : "+C);
-			result += (N*N)*(2*(R/N) + C/N);
-			R %= N;
-			C %= N;
-		}
-		
-		System.out.println(result);
+		stk = new StringTokenizer(in.readLine());
+		N=Integer.parseInt(stk.nextToken());
+		yi=Integer.parseInt(stk.nextToken());
+		xi=Integer.parseInt(stk.nextToken());
+		find((int)Math.pow(2, N), yi, xi);
+//		sb.append(cnt);
+//		out.write(sb.toString());
+		out.write(cnt+"");
+//		System.out.println(cnt);
+		in.close();
+		out.flush();
+		out.close();
+//		Scanner sc = new Scanner(System.in);
+//		int N = 1<<sc.nextInt(), R = sc.nextInt(), C = sc.nextInt();
+//		
+//		int result = 0;
+//		
+//		while ((N/=2) > 0) {
+//			System.out.println("현재 N : "+ N +" 현재 result : "+result+" 현재 R : "+R+"현재 C : "+C);
+//			result += (N*N)*(2*(R/N) + C/N);
+//			R %= N;
+//			C %= N;
+//		}
+//		
+//		System.out.println(result);
 	}
 	private static void find(int n, int y, int x) {
 //		System.out.println("현재 n : "+n+" 현재 y : "+y+" 현재 x : "+x);
