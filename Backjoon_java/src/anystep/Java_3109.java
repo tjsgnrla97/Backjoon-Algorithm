@@ -12,15 +12,15 @@ public class Java_3109 {
 	//빵집
 	//1차풀이
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-	static StringTokenizer st;
+	static StringTokenizer stk;
 	
 	static int[][] map;
 	static int y,x,cnt;
 	static int[] dy = {-1, 0, 1};
 	public static void main(String[] args) throws IOException {
-		st = new StringTokenizer(in.readLine());
-		y = Integer.parseInt(st.nextToken());
-		x = Integer.parseInt(st.nextToken());
+		stk = new StringTokenizer(in.readLine());
+		y = Integer.parseInt(stk.nextToken());
+		x = Integer.parseInt(stk.nextToken());
 		
 		map = new int[y][x];
 		
