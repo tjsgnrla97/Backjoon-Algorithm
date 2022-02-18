@@ -79,8 +79,8 @@ public class Java_15683 {
 		out.close();
 	}
 	private static void dfs(int depth) {
-		//cctv 개수보다 크거나 같아지면 실행
-		if(depth >= CN) {
+		//cctv 개수와 같아지면
+		if(depth == CN) {
 			//임시로 사용할 복제맵
 			int[][] copyMap = new int[N][M];
 			for(int i=0; i<N; i++) {
