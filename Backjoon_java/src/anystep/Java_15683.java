@@ -97,12 +97,12 @@ public class Java_15683 {
 					if(copyMap[y][x]==0) sum++;
 				}
 			}
-//			for(int y=0; y<N; y++) {
-//				for(int x=0; x<M; x++) {
-//					System.out.print(copyMap[y][x]);
-//				}
-//				System.out.println();
-//			}
+			for(int y=0; y<N; y++) {
+				for(int x=0; x<M; x++) {
+					System.out.print(copyMap[y][x]);
+				}
+				System.out.println();
+			}
 			//최소값 갱신
 			ans = Math.min(ans, sum);
 		}
