@@ -12,7 +12,10 @@ public class Java_10163 {
 //	백준 문제 해설의 그림을 시계방향으로 90도 돌려서 생각해봐야한다.
 //	입력으로 받는 왼쪽아래기준이 90도가 돌아가면 왼쪽위로 돌아가게 된다.
 //	즉 이중for문으로 2차원 배열로 입력을 받기 편해진다.
-//	i 초기값을 0으로하면 i+1 1로하면 i를 배열의 값으로 받아들이고 카운트시 해당 종이순번과 같을경우만 증가시켜준다.
+//	시작 x,y좌표를 입력받고 반복문의 초기값으로 초기화해준다.
+//	입력받은 높이와 너비만큼 입력받는 종이수로 덮어씌어준다.
+//	종이수 카운트가 증가하면 자연스럽게 나중에 들어오는 종이가 위로 덮어진다.
+//	2차원 배열을 탐색하면서 cnt 카운트시 해당 종이순번과 배열의 값이 같을경우만 증가시켜준다.
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer stk;
