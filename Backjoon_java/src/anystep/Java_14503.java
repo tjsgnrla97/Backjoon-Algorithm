@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Java_14503 {
-	// 로봇 청소기
+//	 로봇 청소기
 //	1. 로봇이 있는 좌표를 청소한다.
 //	2. 현재있는 위치에서 방향만 회전시킨 후 다음 좌표의 조건을 체크한다.
 //	3. 다음 위치가 빈공간이거나 청소하지 않은 곳이면 1칸 이동후 1로 돌아간다.

@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Java_2508 {
-	// 사탕박사
+//	 사탕박사
 //	2차원 배열에 입력된 문자들을 >o<의 경우엔 행열 탐색으로
 //	v
 //	o
