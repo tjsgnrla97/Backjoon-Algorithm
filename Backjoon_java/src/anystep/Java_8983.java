@@ -69,7 +69,7 @@ public class Java_8983 {
 		while(start<=end) {
 			mid=(start+end)/2;
 			if(mid>=M) return 0;
-			
+			if(L<animals[idx].y) return 0;
 			int distance = getDistance(animals[idx].x, animals[idx].y, rifles[mid]);
 			//동물이 사정거리 범위의 왼쪽 바깥에 있으면
 			if(L<distance && animals[idx].x<rifles[mid]) end = mid-1;
