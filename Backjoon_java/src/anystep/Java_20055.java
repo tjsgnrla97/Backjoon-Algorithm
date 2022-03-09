@@ -12,9 +12,11 @@ public class Java_20055 {
 //	문제 지문이 굉장히 불친절하고 난해해서 구현목표자체가 이해하기가 어려웠습니다.
 //	특히 로봇이 대체 어느시점, 어느단계에서 벨트에 올라가는지, 벨트에서 내려와서 어찌 행동하는지를
 //	이해하기까지 시간을 많이 사용한 문제였습니다.
+//	로봇이 내려오고난 이후 (N-1)~((2*N)-1)까지는 로봇이 없다는 걸 지문에서 이해하기 어려워서
+//	구글링으로 지문에 대한 힌트를 얻었습니다.
 //	차근차근 단계별로 동작을 요약해보자면 다음과 같다.
-//	1. 벨트 한칸 회전
-//	2. 로봇 이동(앞이 빈공간이고 내구도 1이상)
+//	1. 벨트 한칸 회전 - 내려가는 위치에서 로봇 없애기
+//	2. 로봇 이동(앞이 빈공간이고 내구도 1이상) - 내려가는 위치에서 로봇없애기
 //	3. 로봇 올리기 - 여기서 로봇이 벨트에 올라감.!!
 //	4. 내구도 체크 (내구도 0 K개 이상일시 단계종료) 후에 1단계로 순환.
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -78,9 +80,9 @@ public class Java_20055 {
 		int halfSize = SIZE / 2;
 		for(int i = halfSize-2; i>=0; i--) {
 			if(beltPoint[i].robot) { //해당 인덱스에 로봇이 있다면
-				if(i+1 == halfSize-1) { //다음 인덱스가 절반이라면
+				if(i+1 == halfSize-1) { //다음 인덱스가 내려가는 위치라면
 					if(beltPoint[i+1].durability>=1) { //다음 인덱스 내구도가 1이상이면
-						beltPoint[i].robot = false;    //로봇을 바로 내린다.
+						beltPoint[i].robot = false;    //로봇을 내린다.
 						beltPoint[i+1].durability--;   //다음 인덱스의 내구도를 내린다.
 						continue;
 					}
