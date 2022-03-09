@@ -62,24 +62,39 @@ public class Java_8983 {
 		out.close();
 		in.close();
 	}
+	//Solution2. 이진탐색 - 개선
 	private static int hunt(int idx) {
-		int start=0;
-		int end=M;
-		int mid=0;
+		if(animals[idx].y>L) return 0;
+		int start =0, end=M-1, mid=0;
+		int min=animals[idx].x+animals[idx].y-L;
+		int max=animals[idx].x-animals[idx].y+L;
 		while(start<=end) {
 			mid=(start+end)/2;
-			if(mid>=M) return 0;
-			if(L<animals[idx].y) return 0;
-			int distance = getDistance(animals[idx].x, animals[idx].y, rifles[mid]);
-			//동물이 사정거리 범위의 왼쪽 바깥에 있으면
-			if(L<distance && animals[idx].x<rifles[mid]) end = mid-1;
-			//동물이 사정거리 범위의 오른쪽 바깥에 있으면
-			else if(L<distance && animals[idx].x>=rifles[mid]) start = mid+1;
-			//사정거리 안에 들어오는 경우
-			else if(L>=distance) return 1;
+			if(min<=rifles[mid] && rifles[mid]<=max) return 1;
+			else if(rifles[mid]<max) start = mid+1;
+			else end = mid-1;
 		}
 		return 0;
 	}
+	//Solution1. 이진탐색 기본
+//	private static int hunt(int idx) {
+//		int start=0;
+//		int end=M;
+//		int mid=0;
+//		while(start<=end) {
+//			mid=(start+end)/2;
+//			if(mid>=M) return 0;
+//			if(L<animals[idx].y) return 0;
+//			int distance = getDistance(animals[idx].x, animals[idx].y, rifles[mid]);
+//			//동물이 사정거리 범위의 왼쪽 바깥에 있으면
+//			if(L<distance && animals[idx].x<rifles[mid]) end = mid-1;
+//			//동물이 사정거리 범위의 오른쪽 바깥에 있으면
+//			else if(L<distance && animals[idx].x>=rifles[mid]) start = mid+1;
+//			//사정거리 안에 들어오는 경우
+//			else if(L>=distance) return 1;
+//		}
+//		return 0;
+//	}
 	private static int getDistance(int x, int y, int rifle_x) {
 		return Math.abs(rifle_x-x)+y;
 	}
