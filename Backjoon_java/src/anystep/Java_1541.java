@@ -25,7 +25,7 @@ public class Java_1541 {
 			int sum=0;
 			String[] res2 = res1[i].split("\\+");
 			for(int j=0; j<res2.length; j++) sum += Integer.parseInt(res2[j]);
-			ans = i==0?ans+sum:ans-sum;
+			ans = i==0?sum:ans-sum;
 		}
 		out.write(ans+"\n");
 		out.flush();
