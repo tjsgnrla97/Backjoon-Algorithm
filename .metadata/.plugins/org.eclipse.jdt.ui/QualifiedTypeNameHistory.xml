@@ -38,7 +38,6 @@
     <fullyQualifiedTypeName name="anystep.Java_2210.AnsString"/>
     <fullyQualifiedTypeName name="anystep.Java_14502.Virus"/>
     <fullyQualifiedTypeName name="anystep.Java_8983.Animal"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="anystep.Java_20055.Belt"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="anystep.Java_10775"/>
@@ -48,4 +47,6 @@
     <fullyQualifiedTypeName name="org.xml.sax.EntityResolver"/>
     <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="anystep.Java_14499.Dice"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
