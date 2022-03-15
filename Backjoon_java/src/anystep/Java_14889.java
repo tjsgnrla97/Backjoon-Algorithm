@@ -13,6 +13,7 @@ public class Java_14889 {
 //	N=20 스타트팀 혹은 링크팀에 선택하는가 하지않는가 2가지 경우 조합경우 수 최악 O(2^20) 조합사용 가능
 //	각 팀의 수 N/2 (N이짝수) 조합선택카운트 N/2가 될때
 //	선택된사람팀(스타트팀)과 비선택사람팀(링크팀)별 능력치를 더한 후 최솟값을 구하기
+//	메모리 : 18824KB 시간 : 384ms
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer stk;
