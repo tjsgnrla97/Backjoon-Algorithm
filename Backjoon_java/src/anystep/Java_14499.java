@@ -15,6 +15,11 @@ public class Java_14499 {
 	//solution 1 currentDice 클래스를 만들어서 현재 주사위의 좌표와 속성들을 매 순간마다 갱신해준다.
 	//백준 테케 4에서 원점으로 돌아오고 다음 동작이 원하는 동작이 나오지 않아서 실패 ㅠㅠ- 원인을 찾지 못했음.
 	//solution 2 tempDice 배열에 dice배열을 복사하여 넣어준 뒤 각 명령에 맞게 주사위의 값과 바닥을 갱신해준다.
+//	1. 명령의 방향에 따라서 주사위를 굴린다.
+//	2.  해당좌표의 map값과 주사위의 BOTTOM값을 비교한다.
+//	2-1.해당좌표의 map값이 0이라면 그 순간의 주사위 BOTTOM 값을 map에 저장한다.
+//	2-2.해당좌표의 map값이 0이 아니라면 그 값을 주사위의 BOTTOM에 저장하고 map을 0으로 초기화한다.
+//	3. 주사위의 현재좌표를 다음좌표로 갱신한다. 그 후 1로 돌아간다.
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer stk;
