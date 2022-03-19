@@ -1,4 +1,4 @@
-package fail;
+package amend;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Java_14499_fail {
+public class Java_14499_amend {
 //	 주사위 굴리기
 //	각 주사위의 방향인덱스는 변하지 않는다. ex) 1번인덱스는 무조건 TOP 6번인덱스는 무조건 BOTTOM
 //	4방탐색을 위한 delta 1차원 배열의 크기를 5로 지정해준다.(인덱스 1부터 사용하기 때문에)
@@ -206,10 +206,10 @@ public class Java_14499_fail {
 					currentDice.x = nx;
 					map[ny][nx] = currentDice.front;
 					int tempBottom = currentDice.bottom;
-					currentDice.bottom = currentDice.reer;
-					currentDice.reer = currentDice.top;
-					currentDice.top = currentDice.front;
-					currentDice.front = tempBottom;
+					currentDice.bottom = currentDice.front;
+					currentDice.front = currentDice.top;
+					currentDice.top = currentDice.reer;
+					currentDice.reer = tempBottom;
 					sb.append(currentDice.top).append("\n");
 				}
 				else if(map[ny][nx]!=0){
