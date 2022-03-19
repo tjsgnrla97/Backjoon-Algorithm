@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Java_14499_fail {
-	// 주사위 굴리기
+//	 주사위 굴리기
 //	각 주사위의 방향인덱스는 변하지 않는다. ex) 1번인덱스는 무조건 TOP 6번인덱스는 무조건 BOTTOM
 //	4방탐색을 위한 delta 1차원 배열의 크기를 5로 지정해준다.(인덱스 1부터 사용하기 때문에)
 //	solution 1 currentDice 클래스를 만들어서 현재 주사위의 좌표와 속성들을 매 순간마다 갱신해준다.
