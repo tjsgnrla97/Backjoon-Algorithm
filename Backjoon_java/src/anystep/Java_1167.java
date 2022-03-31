@@ -56,12 +56,16 @@ public class Java_1167 {
 				tree[from].add(new Edge(to, weight));
 			}
 		}
+		//임의의 노드 1로부터 각 노드간의 거리배열 dist 저장
 		dist = bfs(tree,1);
+		//임의의 노드 1로부터 최대 거리를 지니는 노드 i 찾기
 		int start=1;
 		for(int i=2; i<=N; i++) {
 			if(dist[start]<dist[i]) start=i;
 		}
+		//해당 노드로부터 각 노드간의 거리 구하기
 		dist = bfs(tree, start);
+		//오름차순 정렬을 하면 가장 마지막 인덱스의 값이 트리내부에서의 노드간 최대거리
 		Arrays.sort(dist);
 		out.write(dist[N]+"");
 		out.flush();
@@ -76,14 +80,14 @@ public class Java_1167 {
 		isVisited[start]=true;
 		
 		while(!q.isEmpty()) {
-			int v = q.poll();
-			for(Edge e : tree[v]) {
+			int from = q.poll();
+			for(Edge e : tree[from]) {
 				int to = e.to;
 				int weight = e.weight;
 				if(!isVisited[to]) {
-					isVisited[to]=true;
 					q.add(to);
-					dist[to]=dist[v]+weight;
+					isVisited[to]=true;
+					dist[to]=dist[from]+weight;
 				}
 			}
 		}
