@@ -25,6 +25,7 @@ public class Java_2262 {
 	//4. 반복문을 돌면서 현재 가장 랭킹이 낮은선수의 위치에 따른 매칭선수와의 랭킹차를 구한 후 정답값에 더하기
 	//5. 패배한 선수 제외 후 가장 낮은 랭킹 조정.
 	//6. 최종적으로 나온 정답값 출력
+	//메모리 14416KB 시간 132ms
 	// 풀이시간 2시간 52분
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
