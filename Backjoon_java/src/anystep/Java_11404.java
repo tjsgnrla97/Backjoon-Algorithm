@@ -9,14 +9,14 @@ import java.util.StringTokenizer;
 
 public class Java_11404 {
 	// 플로이드
-	// 간단하게 플로이드 워샬 알고리즘만 사용하면 풀리는 문제인 줄 알았으나 도중에 고쳐야 할 것이 참으로 많았다.
-	// Solution 1.
-	//1. 자기 자신으로 향하는 경우의 비용을 0으로 처리하고 from to의 관계가 미연결 상태일 시 INF를 받는다.(Integer.MAX_VALUE는 출력초과 오답)
-	//2. 인접행렬을 입력받을 떄 중첩해서 여러번 오는 경우를 방지하기 위해 비용이 최소비용일 경우에만 입력받도록 한다.
-	//3. 플로이드 워샬 알고리즘 실행
-	//4. 인접행렬에 INF가 남아있으면 0으로 바꾼후 출력한다.(안그러면 오답)
-	//메모리 43460KB 시간 456ms
-	//풀이시간 41분 12초
+// 간단하게 플로이드 워샬 알고리즘만 사용하면 풀리는 문제인 줄 알았으나 도중에 고쳐야 할 것이 참으로 많았다.
+// Solution 1.
+//1. 자기 자신으로 향하는 경우의 비용을 0으로 처리하고 from to의 관계가 미연결 상태일 시 INF를 받는다.(Integer.MAX_VALUE는 출력초과 오답)
+//2. 인접행렬을 입력받을 떄 중첩해서 여러번 오는 경우를 방지하기 위해 비용이 최소비용일 경우에만 입력받도록 한다.
+//3. 플로이드 워샬 알고리즘 실행
+//4. 인접행렬에 INF가 남아있으면 0으로 바꾼후 출력한다.(안그러면 오답)
+//메모리 43460KB 시간 456ms
+//풀이시간 41분 12초
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
