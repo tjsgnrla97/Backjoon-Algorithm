@@ -70,15 +70,20 @@ public class Java_9440 {
 			numberAdd();
 		}
 	}
+	//leftShift 연산
+	//1.배열 끝 인덱스에서 n번째 까지 뒤집기
+	//2.배열 0번째 인덱스에서 배열 끝에서 n번째를 뺀 인덱스까지 뒤집기
+	//3.전체 배열 뒤집기
 	private static void swapZero(int[] swapNumber) {
 		int size = swapNumber.length;
 		shift(swapNumber, size-2, size);
-		shift(swapNumber, 0, size-2);
-		shift(swapNumber, 0, size);		
+		shift(swapNumber, 0, size-2); 
+		shift(swapNumber, 0, size);	
 	}
+	//배열 시작 인덱스부터 끝 인덱까지 반복문을 돌면서 swap
 	private static void shift(int[] swapNumber, int front, int reer) {
 		reer--;
-		while(front<reer) {
+		while(front<reer) { //(front~reer)->(front+1 ~ reer-1)까지 진행 //시작에서 끝번까지 뒤집기
 			swap(swapNumber,front,reer);
 			front++;
 			reer--;
