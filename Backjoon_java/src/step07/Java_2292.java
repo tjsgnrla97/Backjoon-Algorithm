@@ -1,4 +1,4 @@
-package step08;
+package step07;
 
 import java.io.IOException;
 import java.util.Scanner;

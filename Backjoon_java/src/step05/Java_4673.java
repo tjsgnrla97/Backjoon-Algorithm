@@ -1,4 +1,4 @@
-package step06;
+package step05;
 
 public class Java_4673 {
 

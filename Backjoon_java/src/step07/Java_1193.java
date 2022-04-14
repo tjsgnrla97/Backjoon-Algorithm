@@ -1,4 +1,4 @@
-package step05;
+package step07;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,29 +7,29 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Java_4344 {
-	//7.평균은 넘겠지
+public class Java_1193 {
+	//3. 분수찾기
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer stk;
 	static StringBuilder sb= new StringBuilder();
+	static int N;
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		int T = Integer.parseInt(in.readLine());
-		for(int tc=1; tc<=T; tc++) {
-			stk = new StringTokenizer(in.readLine());
-			int N = Integer.parseInt(stk.nextToken());
-			double sum=0;
-			int cnt=0;
-			double ans=0;
-			int[] arr = new int[N];
-			for(int i=0; i<N; i++) {
-				arr[i]=Integer.parseInt(stk.nextToken());
-			}
-			for(int a : arr) sum+=a;
-			sum/=(double)N;
-			for(int a : arr) if(a>sum) cnt++;
-			ans = cnt/(double)N*100;
-			sb.append(String.format("%.3f", ans)).append("%\n");
+		N=Integer.parseInt(in.readLine());
+		int line=0;
+		int cnt=0;
+		while(cnt<N) {
+			line++;
+			cnt=line * (line+1) / 2;
+		}
+		if(line%2!=0) {
+			int top = 1+(cnt-N);
+			int bottom = line - (cnt-N);
+			sb.append(top).append("/").append(bottom);
+		}else {
+			int top = line - (cnt-N);
+			int bottom = 1+(cnt-N);
+			sb.append(top).append("/").append(bottom);
 		}
 		out.write(sb.toString());
 		out.flush();

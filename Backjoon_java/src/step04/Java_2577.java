@@ -1,4 +1,4 @@
-package step05;
+package step04;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

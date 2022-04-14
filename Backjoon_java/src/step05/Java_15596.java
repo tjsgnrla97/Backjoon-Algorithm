@@ -1,4 +1,4 @@
-package step06;
+package step05;
 
 public class Java_15596 {
 	//1.정수 N개의 합

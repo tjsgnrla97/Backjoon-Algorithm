@@ -1,4 +1,4 @@
-package step05;
+package step04;
 
 import java.util.Arrays;
 import java.util.Scanner;
