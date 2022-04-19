@@ -60,22 +60,21 @@ public class Java_9935 {
 //		out.close();
 //		in.close();
 	}
-private static String solution(String str, String boom) {
-	char[] res = new char[str.length()];
-	int idx=0;
-	for(int i=0; i<str.length(); i++) {
-		res[idx]=str.charAt(i);
-		if(isBoom(res,idx,boom)) idx -= boom.length();
-		idx++;
+	private static String solution(String str, String boom) {
+		char[] res = new char[str.length()];
+		int idx=0;
+		for(int i=0; i<str.length(); i++) {
+			res[idx]=str.charAt(i);
+			if(isBoom(res,idx,boom)) idx -= boom.length();
+			idx++;
+		}
+		return String.valueOf(res, 0, idx);
 	}
-	return String.valueOf(res, 0, idx);
-}
-private static boolean isBoom(char[] res, int idx, String boom) {
-	if(idx<boom.length()-1) return false;
-	for(int i=0; i<boom.length(); i++) {
-		if(boom.charAt(i)!=res[i+idx-(boom.length()-1)]) return false;
+	private static boolean isBoom(char[] res, int idx, String boom) {
+		if(idx<boom.length()-1) return false;
+		for(int i=0; i<boom.length(); i++) {
+			if(boom.charAt(i)!=res[i+idx-(boom.length()-1)]) return false;
+		}
+		return true;
 	}
-	return true;
-}
-
 }

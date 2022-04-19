@@ -6,6 +6,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -20,6 +21,7 @@ public class Java_20058 {
 //5. 최종적으로 나온 맵배열에서 제일 큰 덩어리(bfs)와 얼음의 합(브루트포스)을 출력한다.
 //실패 원인 분석
 //6번 테케에서 가장 큰 덩어리값이 9가 아닌 7이 나온다. 원인 파악 못하였음 ㅠ
+	//실패했던 이유 Point 클래스 활용 미숙
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
@@ -44,18 +46,21 @@ public class Java_20058 {
 	}
 	private static void getAnsLarge() {
 		isChecked = new boolean[N][N];
+//		for(int[] b : map) System.out.println(Arrays.toString(b)); System.out.println();
 		ansLarge = Integer.MIN_VALUE;
 		for(int y=0; y<N; y++) {
 			for(int x=0; x<N; x++) {
 				if(isChecked[y][x]) continue;
 				int adjCnt=0;
 				Queue<Point> q = new LinkedList<Point>();
+//				System.out.println();
 				q.add(new Point(y,x));
 				while(!q.isEmpty()) {
 					Point current = q.poll();
+//					System.out.printf("current y %d current x %d\n",current.y,current.x);
 					for(int d=0; d<4; d++) {
-						int ny= current.y+dy[d];
-						int nx= current.x+dx[d];
+						int ny= current.x+dy[d];
+						int nx= current.y+dx[d];
 						if(isBoundary(ny, nx)) continue;
 						if(isChecked[ny][nx] || map[ny][nx]<=0) continue;
 						isChecked[ny][nx]=true;
@@ -79,9 +84,12 @@ public class Java_20058 {
 		stk = new StringTokenizer(in.readLine());
 		for(int i=0; i<Q; i++) {
 			int level = Integer.parseInt(stk.nextToken());
+//			if(level==0) continue;
 			level = 1<<level;
 			magicLevel[i] = level;
+//			for(int[] b : map) System.out.println(Arrays.toString(b)); System.out.println(); 
 			map = storm(magicLevel[i]);
+//			if(magicLevel[i]==1) continue;
 			melt();
 		}
 	}
@@ -117,7 +125,7 @@ public class Java_20058 {
 			for(int startX=0; startX<N; startX += range) {
 				for(int y=0; y<range; y++) {
 					for(int x=0; x<range; x++) {
-						tempMap[startX+y][startY+x]=map[startX+range-1-x][startY+y];
+						tempMap[y+startX][x+startY]=map[startX+range-1-x][startY+y];
 					}
 				}
 			}
@@ -128,7 +136,7 @@ public class Java_20058 {
 		stk = new StringTokenizer(in.readLine());
 		N = Integer.parseInt(stk.nextToken());
 		Q = Integer.parseInt(stk.nextToken());
-		
+
 		N=1<<N;
 		map = new int[N][N];
 		for(int y=0; y<N; y++) {
