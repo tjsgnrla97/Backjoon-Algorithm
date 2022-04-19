@@ -11,15 +11,15 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Java_20058 {
-	// 마법사 상어와 파이어스톰
-	//Solution 1.(실패)
-	//1. 2^N만큼 맵배열을 받는다.
-	//2. 맵배열 전체를 마법단계L을 기준으로 회전시킨다.
-	//3. 회전된 맵배열을 전체 탐색하며 얼음을 녹여준다.
-	//4. 2,3단계를 주어진 횟수만큼 반복수행한다.
-	//5. 최종적으로 나온 맵배열에서 제일 큰 덩어리(bfs)와 얼음의 합(브루트포스)을 출력한다.
-	//실패 원인 분석
-	//6번 테케에서 가장 큰 덩어리값이 9가 아닌 7이 나온다. 원인 파악 못하였음 ㅠ
+// 마법사 상어와 파이어스톰
+//Solution 1.(실패)
+//1. 2^N만큼 맵배열을 받는다.
+//2. 맵배열 전체를 마법단계L을 기준으로 회전시킨다.
+//3. 회전된 맵배열을 전체 탐색하며 얼음을 녹여준다.
+//4. 2,3단계를 주어진 횟수만큼 반복수행한다.
+//5. 최종적으로 나온 맵배열에서 제일 큰 덩어리(bfs)와 얼음의 합(브루트포스)을 출력한다.
+//실패 원인 분석
+//6번 테케에서 가장 큰 덩어리값이 9가 아닌 7이 나온다. 원인 파악 못하였음 ㅠ
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
