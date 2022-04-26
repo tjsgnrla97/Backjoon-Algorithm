@@ -11,20 +11,20 @@ import java.util.StringTokenizer;
 
 public class Java_23288 {
 	// 주사위 굴리기 2
-	//메모리 35620KB 시간 224ms
-	//저번 주사위 굴리기 1문제의 응용문제. 이번에는 Dice 클래스를 따로 객체로서 제어함.
-	//또 Point를 사용했다가 정말 영문모를 출력값 오류로 인해 그냥 Node 클래스를 따로 선언함.
-	//어지간해선 Point 사용을 하지 않거나 좌표를 y, x 가 아닌 x, y로 사용 습관을 들여야 할 것 같음.
-	//Solution 1.
-	//1. input()으로 정보 입력
-	//2. 주사위 Dice 객체 초기 설정 선언 0,0 시작방향 1 -> 방향
-	//3. K번 만큼 주사위 굴리고 점수 추가
-	//   3-1. dir 방향으로 주사위를 옮길 시 경계를 벗어나면 역방향 갱신
-	//   3-2. 이동할 좌표로 현재 좌표 갱신
-	//   3-3. 주사위 굴리기로 주사위 멤버변수 갱신
-	//   3-4. 현재 칸의 점수 획득
-	//   3-5. 주사위 다음 방향 설정
-	//풀이시간 1시간 26분 23초
+//메모리 35620KB 시간 224ms
+//저번 주사위 굴리기 1문제의 응용문제. 이번에는 Dice 클래스를 따로 객체로서 제어함.
+//또 Point를 사용했다가 정말 영문모를 출력값 오류로 인해 그냥 Node 클래스를 따로 선언함.
+//어지간해선 Point 사용을 하지 않거나 좌표를 y, x 가 아닌 x, y로 사용 습관을 들여야 할 것 같음.
+//Solution 1.
+//1. input()으로 정보 입력
+//2. 주사위 Dice 객체 초기 설정 선언 0,0 시작방향 1 -> 방향
+//3. K번 만큼 주사위 굴리고 점수 추가
+//   3-1. dir 방향으로 주사위를 옮길 시 경계를 벗어나면 역방향 갱신
+//   3-2. 이동할 좌표로 현재 좌표 갱신
+//   3-3. 주사위 굴리기로 주사위 멤버변수 갱신
+//   3-4. 현재 칸의 점수 획득
+//   3-5. 주사위 다음 방향 설정
+//풀이시간 1시간 26분 23초
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
