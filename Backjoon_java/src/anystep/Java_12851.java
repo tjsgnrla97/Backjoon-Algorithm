@@ -11,14 +11,14 @@ import java.util.StringTokenizer;
 
 public class Java_12851 {
 	// 숨바꼭질 2
-	//메모리 67580KB 시간 232ms
-	//Solution 1.
-	//1. 최단경로(최단시간)? => bfs
-	//2. 현재좌표와 현재시간을 제어할 수 있는 Node 클래스 선언
-	//3. 해당 좌표의 방문처리를 방문한 시간으로서 체크할 수 있는 isVisitedByTime 1차원 int 배열 선언
-	//4. 해당 좌표에 방문할 시 동일한 시간으로 방문하는 경우는 큐에 넣는다. 그보다 더 늦은 시간에 도착하는 경우는 제외
-	//5. 도착한 시간을 비교해서 최단시간이면 caseCnt 증가해주며 큐가 빌때까지 수행해주면 된다.
-	//풀이시간 42분 16초
+//메모리 67580KB 시간 232ms
+//Solution 1.
+//1. 최단경로(최단시간)? => bfs
+//2. 현재좌표와 현재시간을 제어할 수 있는 Node 클래스 선언
+//3. 해당 좌표의 방문처리를 방문한 시간으로서 체크할 수 있는 isVisitedByTime 1차원 int 배열 선언
+//4. 해당 좌표에 방문할 시 동일한 시간으로 방문하는 경우는 큐에 넣는다. 그보다 더 늦은 시간에 도착하는 경우는 제외
+//5. 도착한 시간을 비교해서 최단시간이면 caseCnt 증가해주며 큐가 빌때까지 수행해주면 된다.
+//풀이시간 42분 16초
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
