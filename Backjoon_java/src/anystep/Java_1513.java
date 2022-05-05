@@ -36,7 +36,7 @@ public class Java_1513 {
 	static StringTokenizer stk;
 	static int N,M,C;
 	static final int mod = 1000007;
-	static int[][][][] dp; //[y][x][현재 좌표 오락실 번호][통과한 오락실 개수] = 경로 개수
+	static int[][][][] dp; //[y][x][현재까지 방문한 최대 오락실 번호][통과한 오락실 개수] = 경로 개수
 	static int[][] map;
 	public static void main(String[] args) throws IOException {
 		input();
@@ -52,7 +52,8 @@ public class Java_1513 {
 				if(y==1 && x==1) continue;
 				if(map[y][x]>0) { //오락실 좌표일 경우
 					for(int c=0; c<map[y][x]; c++) { // 방문한 최대 오락실 번호(현재방문 오락실번호 -1까지)
-						for(int d=0; d<=c; d++) { //방문 오락실 개수(지금 방문한 오락실 번호-1까지가 최대 방문수)
+						for(int d=0; d<=c; d++) { //방문 오락실 개수(지금 방문한 오락실 번호-1까지가 최대 방문수)(0은 
+							//처음방문한 번호면 지금까지의 모든 오락실번호가 방문오락실개수 0가지일경우의 모든 경우의 수를 더한 경우거나 모든 방문오락실개수의 경우의 수를 더한 경우
 							dp[y][x][map[y][x]][d+1] += dp[y-1][x][c][d]+dp[y][x-1][c][d]; //현재 방문한 오락실을 제외한 지금까지 방문한 경로의 경우의 수 총합
 							dp[y][x][map[y][x]][d+1] %= mod;
 						}
@@ -83,7 +84,7 @@ public class Java_1513 {
 		M = Integer.parseInt(stk.nextToken());
 		C = Integer.parseInt(stk.nextToken());
 		map = new int[N+1][M+1];
-		dp = new int[51][51][51][51];
+		dp = new int[N+1][M+1][C+1][C+1];
 		dp[1][1][0][0]=1;
 		for(int c=1; c<=C; c++) {
 			stk = new StringTokenizer(in.readLine());
