@@ -1,4 +1,4 @@
-package step14;
+package step15;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,8 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Java_15649 {
-	// 1.N과 M (1)
+public class Java_15650 {
+	// 1.N과 M (2)
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
@@ -36,10 +36,10 @@ public class Java_15649 {
 		}
 		for(int i=0; i<N; i++) {
 			if(!isVisited[i]) {
-				isVisited[i]=true;
 				arr[depth]=i+1;
+				isVisited[i]=true;
 				dfs(depth+1);
-				isVisited[i]=false;
+				for(int j=i+1; j<N; j++) isVisited[j]=false;
 			}
 		}
 	}
