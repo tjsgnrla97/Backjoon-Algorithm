@@ -26,8 +26,6 @@
     <fullyQualifiedTypeName name="anystep.Java_3190.Snake"/>
     <fullyQualifiedTypeName name="anystep.Java_1167.Edge"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.Deque"/>
-    <fullyQualifiedTypeName name="java.util.ArrayDeque"/>
     <fullyQualifiedTypeName name="anystep.Java_1600.Monkey"/>
     <fullyQualifiedTypeName name="anystep.Java_1194.Node"/>
     <fullyQualifiedTypeName name="anystep.Java_15685.Dot"/>
@@ -58,6 +56,8 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+    <fullyQualifiedTypeName name="java.util.Deque"/>
+    <fullyQualifiedTypeName name="java.util.ArrayDeque"/>
     <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
