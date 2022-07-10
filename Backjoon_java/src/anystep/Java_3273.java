@@ -21,7 +21,7 @@ public class Java_3273 {
 //	4. 배열의 시작인덱스와 끝인덱스를 더하기
 //	5. 목표 수를 조건으로 인덱스 조정
 //	6. 정답 쌍 출력
-//	메모리 271690 시간 376ms
+//	메모리 27160 시간 376ms
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
