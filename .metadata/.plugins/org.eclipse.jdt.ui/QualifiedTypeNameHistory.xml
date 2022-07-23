@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="anystep.Java_15686.Position"/>
     <fullyQualifiedTypeName name="anystep.Java_1753.Edge"/>
     <fullyQualifiedTypeName name="anystep.Java_7576.Node"/>
     <fullyQualifiedTypeName name="anystep.Java_17144.AirCleaner"/>
@@ -56,8 +55,9 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.Queue"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="anystep.Java_2146.Position"/>
 </qualifiedTypeNameHistroy>
