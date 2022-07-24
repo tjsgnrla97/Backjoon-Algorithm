@@ -53,14 +53,14 @@ public class Java_2146 {
 		findAns();
 		output();
 	}
-	//출력
+	//6.출력
 	private static void output() throws IOException {
 		out.write(ans+"");
 		out.flush();
 		out.close();
 		in.close();
 	}
-	//정답 찾기
+	//4.정답 찾기
 	private static void findAns() {
 		for(int y=0; y<N; y++) {
 			for(int x=0; x<N; x++) {
@@ -68,7 +68,7 @@ public class Java_2146 {
 			}
 		}
 	}
-	//정답 만들기(최단경로 다리)
+	//5.정답 만들기(최단경로 다리)
 	private static void makeAns(Position p) {
 		isVisited = new boolean[N][N];
 		Queue<Position> q = new LinkedList<>();
@@ -89,7 +89,7 @@ public class Java_2146 {
 			}
 		}
 	}
-	//육지 탐색
+	//2.육지 탐색
 	private static void findLand() {
 		for(int y=0; y<N; y++) {
 			for(int x=0; x<N; x++) {
@@ -97,7 +97,7 @@ public class Java_2146 {
 			}
 		}
 	}
-	//육지덩어리(섬) 넘버링
+	//3.육지덩어리(섬) 넘버링
 	private static void putLandNum(Position p) {
 		Queue<Position> q = new LinkedList<>();
 		landNum++;
@@ -121,7 +121,7 @@ public class Java_2146 {
 		if(ny>=0&&nx>=0&&ny<N&&nx<N) return true;
 		return false;
 	}
-	//입력
+	//1.입력
 	private static void input() throws NumberFormatException, IOException {
 		N = Integer.parseInt(in.readLine());
 		map = new int[N][N];
