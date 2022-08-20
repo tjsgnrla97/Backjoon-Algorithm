@@ -10,14 +10,15 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Java_16918 {
-	// 봄버맨
-	//메모리 108828KB 시간 316ms
-	//Solution 1.
-	//1. 초기 맵 입력
-	//2. 각 시간마다의 붐버맨 행동(2초단위로 폭탄 설치 3초주기로 폭탄 폭발)
-	//3. N초까지 반복
-	//4. 최종 맵 상태 갱신
-	//5. 맵 출력
+// 봄버맨
+//메모리 108828KB 시간 316ms
+//Solution 1.
+//1. 초기 맵 입력
+//2. 각 시간마다의 붐버맨 행동(2초단위로 폭탄 설치 3초주기로 폭탄 폭발)
+//3. N초까지 반복
+//4. 최종 맵 상태 갱신
+//5. 맵 출력
+//풀이시간 52분 17초
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
