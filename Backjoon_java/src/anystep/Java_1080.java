@@ -4,17 +4,17 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 public class Java_1080 {
-    //행렬
-    //메모리 14316 KB 시간 124 ms
-    //행렬 A의 부분 행렬(3*3)을 변환하여 행렬 B를 만들 수 있는지 확인하는 문제.
-    //행렬 A의 가장 첫 부분(0,0)부터 행렬 B와 비교하며 변환
-    //Solution 1.
-    //1. 행렬 A와 B를 입력받는다.
-    //2. 행렬A(i,j)와 행렬(i,j)의 값이 다르면 (i,j) 기준 부분행렬 만든 후 변환.
-    //2.1 주어지는 행렬이 (3*3)보다 작은 경우 변환 불가능하기에 배열의 동일성만 체크
-    //3. 더 이상 부분행렬을 만들 수 없으면 비교 중단.
-    //4. 비교 중단 후 행렬A 행렬B 가 같은지 확인.
-    //풀이시간 : 1시간 01분 24초
+//행렬
+//메모리 14316 KB 시간 124 ms
+//행렬 A의 부분 행렬(3*3)을 변환하여 행렬 B를 만들 수 있는지 확인하는 문제.
+//행렬 A의 가장 첫 부분(0,0)부터 행렬 B와 비교하며 변환
+//Solution 1.
+//1. 행렬 A와 B를 입력받는다.
+//2. 행렬A(i,j)와 행렬(i,j)의 값이 다르면 (i,j) 기준 부분행렬 만든 후 변환.
+//2.1 주어지는 행렬이 (3*3)보다 작은 경우 변환 불가능하기에 배열의 동일성만 체크
+//3. 더 이상 부분행렬을 만들 수 없으면 비교 중단.
+//4. 비교 중단 후 행렬A 행렬B 가 같은지 확인.
+//풀이시간 : 1시간 01분 24초
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringBuilder sb = new StringBuilder();
