@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 public class Java_2602 {
-// 돌다리 건너기
+    // 돌다리 건너기
 // dp 문제라는 것을 깨닫기 까지 2시간 가량 소모
 // 완탐 실패
 // 풀이 실패후 서칭 그러나 제대로 된 이해 불가
@@ -34,23 +34,24 @@ public class Java_2602 {
     static char[] angel, devil, magicKeyword;
     static int ans;
     static int[][][] dp;
+
     public static void main(String[] args) throws IOException {
         input();
-        ans = move(0,0,0) + move(0,0,1);
+        ans = move(0, 0, 0) + move(0, 0, 1);
         System.out.println(ans);
     }
 
     private static int move(int findCnt, int start, int type) {
-        if(findCnt == magicKeyword.length) {
+        if (findCnt == magicKeyword.length) {
             return 1;
         }
-        if(dp[findCnt][start][type] != 0) {
+        if (dp[findCnt][start][type] != 0) {
             return dp[findCnt][start][type];
         }
         int temp = 0;
         for (int i = start; i < angel.length; i++) {
-            if((type == 0 && magicKeyword[findCnt] == devil[i] || (type == 1 && magicKeyword[findCnt] == angel[i]))) {
-                temp += move(findCnt+1, i+1, (type==0)?1:0);
+            if ((type == 0 && magicKeyword[findCnt] == devil[i] || (type == 1 && magicKeyword[findCnt] == angel[i]))) {
+                temp += move(findCnt + 1, i + 1, (type == 0) ? 1 : 0);
             }
         }
         return dp[findCnt][start][type] = temp;
@@ -60,38 +61,6 @@ public class Java_2602 {
         magicKeyword = in.readLine().toCharArray();
         devil = in.readLine().toCharArray();
         angel = in.readLine().toCharArray();
-        dp = new int[magicKeyword.length+1][angel.length+1][2];
+        dp = new int[magicKeyword.length + 1][angel.length + 1][2];
     }
-
-//    static String magicKeyword, angel, devil;
-//    static int ans;
-//    public static void main(String[] args) throws IOException {
-//        magicKeyword = in.readLine();
-//        devil = in.readLine();
-//        angel = in.readLine();
-//        move(0, 0, 0);
-//        System.out.println(ans);
-//    }
-//
-//    private static void move(int findIdx, int startIdx, int type) {
-//        if(findIdx == magicKeyword.length()) {
-//            ans++;
-//            return;
-//        }
-//        //악마 돌다리
-//        if(type==0) {
-//            for(int i = startIdx; i<devil.length(); i++) {
-//                if(magicKeyword.charAt(findIdx) == devil.charAt(i)) {
-//                    move(findIdx+1,i+1,1 );
-//                }
-//            }
-//        }
-//        else {
-//            for(int i = startIdx; i<angel.length(); i++) {
-//                if(magicKeyword.charAt(findIdx) == angel.charAt(i)) {
-//                    move(findIdx+1, i+1, 0);
-//                }
-//            }
-//        }
-//    }
 }
