@@ -23,6 +23,7 @@ public class Java_2566 {
         out.flush();
         out.close();
         in.close();
+        System.out.println();
     }
 
     private static void searchMaxNum() {
