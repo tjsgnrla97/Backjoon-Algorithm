@@ -1,4 +1,4 @@
-package step15;
+package step16;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,17 +7,21 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Java_15651 {
-	// N과 M(3)
+public class Java_15649 {
+	// 1.N과 M (1)
 	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 	static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringBuilder sb = new StringBuilder();
 	static StringTokenizer stk;
-	static int N,M;
-	static boolean[] isSelected;
+	static int N, M;
 	static int[] arr;
+	static boolean[] isVisited;
 	public static void main(String[] args) throws IOException {
-		input();
+		stk = new StringTokenizer(in.readLine());
+		N = Integer.parseInt(stk.nextToken());
+		M = Integer.parseInt(stk.nextToken());
+		arr = new int[M];
+		isVisited = new boolean[N];
 		dfs(0);
 		out.write(sb.toString());
 		out.flush();
@@ -31,19 +35,13 @@ public class Java_15651 {
 			return;
 		}
 		for(int i=0; i<N; i++) {
-			isSelected[i]=true;
-			arr[depth]=i+1;
-			dfs(depth+1);
-			isSelected[i]=false;
+			if(!isVisited[i]) {
+				isVisited[i]=true;
+				arr[depth]=i+1;
+				dfs(depth+1);
+				isVisited[i]=false;
+			}
 		}
-	}
-	private static void input() throws IOException {
-		stk = new StringTokenizer(in.readLine());
-		N = Integer.parseInt(stk.nextToken());
-		M = Integer.parseInt(stk.nextToken());
-		
-		isSelected = new boolean[N];
-		arr = new int[M];
 	}
 
 }
