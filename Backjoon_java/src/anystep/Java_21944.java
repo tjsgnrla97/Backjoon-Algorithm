@@ -4,7 +4,21 @@ import java.io.*;
 import java.util.*;
 
 public class Java_21944 {
-    //문제 추천 시스템 Version 2
+//문제 추천 시스템 Version 2
+//구글링
+//메모리 73096KB 시간 960ms
+//Set과 Map 등의 자료구조 등을 이용해야 하는 문제인것은 문제의 제한을 보고 인지.
+//최악 P 100000 * L 100 * G 100을 * M 10000번을 탐색해야 할 수도 있는 경우 이기에 일반적인 순차탐색은 해결법에서 배제
+//키값을 통한 정보접근이 곧바로 가능한 Set과 Map을 통한 자료구조를 이용해 빠르게 정보에 대한 조회와 수정,추가,삭제가 필요한 문제임을 확인.
+//다만 Set과 Map의 지니고 있는 메서드들이 기억이 나지 않아 구글링.
+//추천리스트의 추가와 삭제, 조회 3가지를 비롯하여 총 5가지의 명령분기를 지니는 문제.
+//조회 3가지의 전제 조건과 삭제 조건 중 문제분류 G를 통한 분류와 난이도 L을 통한 분류, 아무상관없는 전체 분류와 P로 해당 문제의 L과 G의 접근에 사용할 자료구조가 필요.
+//Solution 1.
+//1. 문제의 번호, 난이도, 분류를 요소로 갖는 클래스 선언
+//2. 최초 입력값 초기화
+//3. 명령문 개수만큼 반복문 실행
+//4. 명령의 분기조건에 따른 조회,추가,삭제 실행
+//풀이시간 3시간 24분 12초
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer stk;
@@ -128,8 +142,8 @@ public class Java_21944 {
                     temp.add(new Problem(P, L, G));
                     problemMap.put(G, temp);
                 }
-                LMap.put(P,L);
-                GMap.put(P,G);
+                LMap.put(P, L);
+                GMap.put(P, G);
             }
             //전체 중 삭제
             else {
