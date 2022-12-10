@@ -5,15 +5,15 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class Java_14698 {
-    //전생했더니 슬라임 연구자였던 건에 대하여 (Hard)
-    //solution 1.
-    //1. 오름차순으로 슬라임 합체를 위한 pq에 추가.
-    //2. 슬라임 사이즈가 1보다 클때까지 반복문
-    //3. 슬라임 두 개를 곱한값을 정닶값에 곱한다. (mod 연산 필수)
-    //4. 합쳐진 슬라임을 다시 pq에 넣는다.
-    //5. 최종 사이즈 1이 될때까지 반복.
-    //메모리 145720KB 시간 2608ms
-    //풀이시간 28분 17초
+//전생했더니 슬라임 연구자였던 건에 대하여 (Hard)
+//solution 1.
+//1. 오름차순으로 슬라임 합체를 위한 pq에 추가.
+//2. 슬라임 사이즈가 1보다 클때까지 반복문
+//3. 슬라임 두 개를 곱한값을 정닶값에 곱한다. (mod 연산 필수)
+//4. 합쳐진 슬라임을 다시 pq에 넣는다.
+//5. 최종 사이즈 1이 될때까지 반복.
+//메모리 145720KB 시간 2608ms
+//풀이시간 28분 17초
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     static BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
     static StringTokenizer stk;
