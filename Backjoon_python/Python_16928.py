@@ -1,3 +1,4 @@
+#뱀과 사다리 게임
 import sys
 from collections import deque
 input = sys.stdin.readline
