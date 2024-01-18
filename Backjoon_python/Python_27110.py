@@ -1,3 +1,4 @@
+#특식 배부
 n = int(input())
 chickens = list(map(int,input().split()))
 ans = 0
